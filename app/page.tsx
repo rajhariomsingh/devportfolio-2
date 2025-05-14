@@ -53,7 +53,7 @@ const useTheme = () => {
   return context;
 };
 
-export const GlobalStyles = () => {
+const GlobalStyles = () => {
   return (
     <style jsx global>{`
       /* Custom Scrollbar */
@@ -226,7 +226,7 @@ function Contact() {
   );
 }
 
-export function About() {
+const About = () => {
   return (
     <div className="space-y-6">
       <motion.h2
@@ -859,7 +859,7 @@ interface ParallaxProps {
   offset?: number;
 }
 
-export const Parallax = ({ children, offset = 50 }: ParallaxProps) => {
+const Parallax = ({ children, offset = 50 }: ParallaxProps) => {
   const ref = useRef(null);
   const { scrollYProgress } = useScroll({
     target: ref,
